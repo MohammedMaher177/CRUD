@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD System</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container py-5">
+            <h1 class="mb-5">Smart CRUD System</h1>
+            <form>
+                <div class="mb-5">
+                    <label for="produactName" class="mb-2">ProduactName</label>
+                    <input type="text" name="produactName" id="produactName"
+                        class="border
+                        form-control">
+                    <p class="text-danger mb-5 d-none" id="InvalidName">Invalid
+                        Input,
+                        the name must include capital character and from 3 to 8
+                        small character</p>
+                </div>
+                <div class="mb-5">
+                    <label for="productPrice" class="mb-2">productPrice</label>
+                    <input type="number" name="productPrice" id="productPrice"
+                        class="
+                        form-control mb-2">
+                    <p class="text-danger mb-5 d-none" id="invalidPrice">Invalid
+                        Input,
+                        the price must smallest than 10000$ and bigger than
+                        1000$</p>
+                </div>
+                <div>
+                    <label for="productModel" class="mb-2">productModel</label>
+                    <!-- <input type="text" name="productModel" id="productModel"
+                        class="
+                        form-control mb-2"> -->
+                    <select name="productModel" id="productModel" class="mb-5
+                        form-select w-25">
+                        <option value="mobile">Moblie</option>
+                        <option value="phone">Phone</option>
+                        <option value="tv">TV</option>
+                    </select>
+                </div>
+                <div class="mb-5">
+                    <label for="productDesc" class="mb-2">productDesc</label>
+                    <input type="text" name="productDesc" id="productDesc"
+                        class="
+                        form-control mb-2">
+                    <p class="text-danger mb-5 d-none" id="invalidDesc">Invalid
+                        Input,
+                        the descreption must have between 30 to 100 character</p>
+                </div>
+                <button class="btn btn-info mb-5 d-block" type="submit"
+                    id="addProduct">Add
+                    Product</button>
+                <button class="btn btn-info d-none mb-5"
+                    id="ubdateProduct" type="submit">ubdate Product</button>
+            </form>
+            <hr>
+            <input type="search" name="" id="searchInput" class="form-control
+                mb-3 w-75 m-auto" placeholder="Search By /name ... ">
+            <div id="display" class="border border-bottom-0">
+                <table class="table text-center">
+                    <thead>
+                        <th>index</th>
+                        <th>ProductName</th>
+                        <th>ProductPrice</th>
+                        <th>ProductCategory</th>
+                        <th>ProductDesc</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="displayDataa">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+        <script src="js/index.js"></script>
+    </body>
+</html>
