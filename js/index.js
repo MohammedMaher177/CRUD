@@ -46,6 +46,7 @@ function addProduct() {
   displayProducts(productList);
   localStorage.setItem("products", JSON.stringify(productList));
   clearData();
+  console.log("ADDED");
 }
 
 function displayProducts(list) {
@@ -166,3 +167,27 @@ function validation() {
     invalidDesc.classList.replace("d-block", "d-none");
   }
 }
+
+document.addEventListener("keyup", (e) => {
+  // console.log(e);
+  if (ubdateProductBtn.classList.contains("d-block")) {
+    switch (e.key) {
+      case "Enter":
+        updateProduct();
+        console.log(e.key);
+        break;
+      default:
+        break;
+    }
+  }
+  if (addProductBtn.classList.contains("d-block")) {
+    switch (e.key) {
+      case "Enter":
+        addProduct();
+        console.log(e.key);
+        break;
+      default:
+        break;
+    }
+  }
+});
